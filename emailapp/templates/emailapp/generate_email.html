@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Email</title>
+</head>
+<body>
+    <h2>Generate Email</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="prompt">Prompt:</label>
+        <input type="text" name="prompt" required><br>
+        <button type="submit">Generate</button>
+    </form>
+    {% if email_content %}
+        <h3>Generated Email</h3>
+        <p>{{ email_content }}</p>
+    {% endif %}
+</body>
+</html>

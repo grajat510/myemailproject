@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inbox</title>
+</head>
+<body>
+    <h2>Inbox</h2>
+    <ul>
+        {% for email in emails %}
+            <li>{{ email.subject }} - {{ email.created_at }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
